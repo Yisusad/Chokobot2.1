@@ -8,7 +8,11 @@ from langchain.chains.question_answering import load_qa_chain
 from dotenv import load_dotenv
 
 FILE_LIST = "archivos.txt"
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+PINECONE_API_KEY = st.secrets['PINECONE_API_KEY']
+PINECONE_ENV = st.secrets['PINECONE_ENV']
+OPENAI_API_KEY = st.secrets['OPENAI_API_KEY']
+INDEX_NAME = st.secrets['PINECONE_INDEX_NAME']
+
 
 st.set_page_config('preguntaDOC')
 st.header("Pregunta a tu PDF")
