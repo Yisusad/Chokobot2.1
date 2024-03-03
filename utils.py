@@ -13,10 +13,10 @@ from langchain.embeddings import OpenAIEmbeddings, HuggingFaceEmbeddings
 load_dotenv()
 
 FILE_LIST = "archivos.txt"
-PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
-PINECONE_ENV = os.getenv('PINECONE_ENV')
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-INDEX_NAME = os.getenv('PINECONE_INDEX_NAME')
+PINECONE_API_KEY = st.secrets['PINECONE_API_KEY']
+PINECONE_ENV = st.secrets['PINECONE_ENV']
+OPENAI_API_KEY = st.secrets['OPENAI_API_KEY']
+INDEX_NAME = st.secrets['PINECONE_INDEX_NAME']
 
 
 pinecone.init(
