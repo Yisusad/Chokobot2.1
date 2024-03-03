@@ -14,6 +14,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 
+OPENAI_API_KEY = st.secrets['OPENAI_API_KEY']
 
 #Crea la cadena de conversación
 def get_conversation_chain(vstore):
